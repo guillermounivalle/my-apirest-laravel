@@ -1,5 +1,10 @@
 <?php
 
+
+/**
+ * Aquí generamos la rutas de mi API
+ */
+
 use Illuminate\Http\Request;
 
 /*
@@ -16,3 +21,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//NOta: En el archivo .env debo asignar el nombre de la base de datos y la contraseña
+Route::apiResource("students", "StudentsController");
